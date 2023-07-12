@@ -29,7 +29,7 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
   }
-  const searchedListings = listings.filter((listing) => (listing.description.includes(searchValue)))
+  const searchedListings = listings.filter((listing) => (listing.description.toLowerCase().includes(searchValue.toLowerCase())))
 
   const handleSearchValue = (e) => {
     setSearchValue(e.target.value)
