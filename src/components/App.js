@@ -28,9 +28,8 @@ function App() {
 //Search function can be improved to turn searchValue lowercase and to return all listings if search is ""
   function handleSubmit(e) {
     e.preventDefault();
-    const searchedListings = listings.filter((listing) => (listing.description.includes(searchValue)))
-    setListings(searchedListings)
   }
+  const searchedListings = listings.filter((listing) => (listing.description.includes(searchValue)))
 
   const handleSearchValue = (e) => {
     setSearchValue(e.target.value)
@@ -39,7 +38,7 @@ function App() {
   return (
     <div className="app">
       <Header searchValue={searchValue} handleSubmit={handleSubmit} handleSearchValue={handleSearchValue}/>
-      <ListingsContainer listings={listings} handleDelete={handleDelete}/>
+      <ListingsContainer listings={searchedListings} handleDelete={handleDelete}/>
     </div>
   );
 }
