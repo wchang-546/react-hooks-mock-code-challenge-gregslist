@@ -25,10 +25,10 @@ function App() {
     setListings(listingAfterDelete)
   }
 
-//Search function can be improved to turn searchValue lowercase, to return partial matches, and to return all listings if search is ""
+//Search function can be improved to turn searchValue lowercase and to return all listings if search is ""
   function handleSubmit(e) {
     e.preventDefault();
-    const searchedListings = listings.filter((listing) => (listing.description === searchValue))
+    const searchedListings = listings.filter((listing) => (listing.description.includes(searchValue)))
     setListings(searchedListings)
   }
 
