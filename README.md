@@ -31,11 +31,15 @@ in the browser to verify that your backend is working before you proceed!
 As a user:
 
 1. When the app starts, I can see all listings.
+[X]
 2. I can "favorite" and "unfavorite" a listing on the frontend by clicking the
    star icon. This feature doesn't need backend persistence.
+[X]
 3. I can remove a listing from the page by clicking the trash can icon. This
    change should be persisted in the backend.
+[X]
 4. I can search for listings by their name.
+[X]
 
 ### Endpoints for Core Deliverables
 
